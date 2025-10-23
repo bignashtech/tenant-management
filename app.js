@@ -91,7 +91,8 @@ addBtn.addEventListener("click", () => {
 
 // Function to add click event to rows
 function addRowClickEvent(row) {
-  row.addEventListener("click", function () {
+  row.addEventListener("click", function (event) {
+    event.stopPropagation();
     // Remove selected class from previous row
     if (selectedRow) {
       selectedRow.classList.remove("selected");
@@ -120,10 +121,10 @@ document.addEventListener("click", (event) => {
   }
 });
 
-// // Add click events to existing rows
-// document.querySelectorAll(".select-row").forEach((row) => {
-//   addRowClickEvent(row);
-// });
+// Add click events to existing rows
+document.querySelectorAll(".select-row").forEach((row) => {
+  addRowClickEvent(row);
+});
 
 // Update payment status
 updateBtn.addEventListener("click", function () {
@@ -138,10 +139,9 @@ updateBtn.addEventListener("click", function () {
   statusSpan.textContent = newStatus;
 
   // Update the styling
-  if (newStatus === "Complete") {
-    statusSpan.className = "pm complete";
+  if (newStatus === "Completed") {
+    statusSpan.className = "pm completed";
   } else {
     statusSpan.className = "pm incomplete";
   }
 });
-
