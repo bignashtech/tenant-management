@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Base</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2 style="margin-bottom: 20px;">Tenant Management</h2>
+      
+      <div class="form">
+        <input type="text" id="tenant-name" placeholder="Tenant's Name" />
+        <input type="text" id="phone-number" placeholder="Phone Number" />
+        <input type="text" id="apartment" placeholder="Apartment Number / Name" />
+        <input type="text" id="amount-paid" placeholder="Amount Paid" />
+      </div>
+      
+      <button type="submit" class="add" id="add-btn">
+        Add Tenant <b>+</b>
+      </button>
+
+      <div class="status-section">
+        <select name="Status" id="payment-status">
+          <option value="Incomplete">Incomplete</option>
+          <option value="Complete">Complete</option>
+        </select>
+        <button type="button" id="update-status">Update Status</button>
+      </div>
+
+      <table id="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Apartment</th>
+            <th>Amount Paid</th>
+            <th>Payment Status</th>
+          </tr>
+        </thead>
+        <tbody id="tenant-table">
+          <tr class="select-row">
+            <td>Fuseini Adams</td>
+            <td>0553875882</td>
+            <td>Alum Apartment</td>
+            <td><span1>GH₵</span1> 1,893</td>
+            <td><span class="pm complete">Complete</span></td>
+          </tr>
+          <tr class="select-row">
+            <td>Isshaku Rashid</td>
+            <td>0503876666</td>
+            <td>Greep Apartment</td>
+            <td><span1>GH₵</span1> 1,893</td>
+            <td><span class="pm incomplete">Incomplete</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Modal for Empty fills-->
+    <div id="error-modal" class="modal">
+      <div class="modal-content">
+        <h3>⚠️ Empty Fields</h3>
+        <p>Please fill in all fields before adding a tenant!</p>
+        <button class="modal-close" id="close-modal">OK</button>
+      </div>
+    </div>
+
+    <!-- Modal for Update Status -->
+    <div id="select-row-modal" class="modal">
+      <div class="modal-content">
+        <h3>⚠️ No Row Selected</h3>
+        <p>Please select a row before updating the status!</p>
+        <button class="modal-close" id="close-select-modal">OK</button>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Base</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form">
+        <input type="text" placeholder="Tenant's Name" />
+        <input type="text" placeholder="Phone Number" />
+        <input type="text" placeholder="Apartment Number / Name" />
+        <input type="text" placeholder="Amount Paid" />
+      </div>
+
+      <button type="submit" class="add" id="add-btn">
+        Add Tenant <b> +</b>
+      </button>
+
+      <select name="Status" id="payment-status">
+        <option value="incompleted">Incomplete</option>
+        <option value="completed">Completed</option>
+      </select>
+
+      <button type="button" id="update-status">Update</button>
+
+      <div id="display-form-details" style="background-color: aliceblue;margin-top: 15px;";>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Apartment</th>
+            <th>Amount Paid</th>
+            <th>Payment Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html> -->
