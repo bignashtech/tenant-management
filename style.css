@@ -121,7 +121,7 @@ tr:hover {
   display: inline-block;
 }
 
-.complete {
+.completed {
   background: rgb(144, 238, 144);
   color: green;
 }
