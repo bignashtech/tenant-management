@@ -122,9 +122,9 @@ document.addEventListener("click", (event) => {
 });
 
 // Add click events to existing rows
-document.querySelectorAll(".select-row").forEach((row) => {
-  addRowClickEvent(row);
-});
+// document.querySelectorAll(".select-row").forEach((row) => {
+//   addRowClickEvent(row);
+// });
 
 // Update payment status
 updateBtn.addEventListener("click", function () {
@@ -145,3 +145,4 @@ updateBtn.addEventListener("click", function () {
     statusSpan.className = "pm incomplete";
   }
 });
+
